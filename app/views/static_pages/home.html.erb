@@ -1,8 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <% provide(:title, "Clock+") %>
-<div class="center"
-  <h1>Clock+</h1>
-  <h2>
-    This is a clock.
-  </h2>
+<div class="col-sm-3">
+<table class="table">
+      <tr>
+        <td><a href="#" class="fa fa-circle" style="color:green;">  Business time</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fa fa-circle" style="color:orange;">  Business overtime</a></td>
+      </tr>
+      <tr>
+        <td><a class="fa fa-circle" style="color:red;">  Personal time</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fa fa-moon-o" style="color:blue;">  Business time</a></td>
+      </tr>
+  </table>
 </div>
+<div class="col-sm-6">
+  <h1>Clock+</h1>
+  <p>
+    Clock+ built by Brigitta Gloria Hegarini - email: s3766172@[default student rmit id] - Attempt grade level: PASS - Tuesday 6:30 pm Group 
+  </p>
+  <div class="jumbotron worldclock">
+  <h2 class="time" style="color: Black;"><%=Time.zone = "Melbourne"  %> 
+  <p class ="text-right" style="color Black"><%= Time.zone.today %></p>
+  <p class="text-right" style="color: Black;" > <%= Time.zone %></p>
+  <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+<hr>
 
+<h2 class = "time" style="color: Black;"><%=Time.zone = "Tokyo" %>
+<p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
+<p class="text-right" style="color: Black;" > <%= Time.zone %></p>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+<hr>
+
+<h2 class = "time" style="color: Black;"><%=Time.zone =  "Singapore" %>
+<p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
+<p class="text-right" style="color: Black;" > <%= Time.zone %></p>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+<hr>
+</div>
+</div>
+<div class="col-sm-3">
+</div>
