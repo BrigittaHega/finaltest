@@ -2,10 +2,8 @@
 
 Heroku link: https://shrouded-taiga-31299.herokuapp.com/
 Heroku last deployment log: 
-s3766172@student.rmit.edu.au: Deployed 4e4cdf17
-Today at 6:17 AM · v9
-
-
+s3766172@student.rmit.edu.au: Deployed 6f195b9a
+Just now · v10
 
 Github: https://github.com/BrigittaHega/finaltest.git
 
