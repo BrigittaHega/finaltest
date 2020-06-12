@@ -117,10 +117,10 @@
   end %>
 </p>
 <p class="text-right" style="color: Black;" >
+<!--https://www.ruby-forum.com/t/newbie-convert-integer-to-string-in-ruby/91550?fbclid=IwAR2wcHfsv5ZpgiSaE6POrWTKwEvV7NeaiuIdN2GDrO8wIvL0EMuBftXB-Os-->
 <%=  if Time.zone.now.hour > Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day > Time.now.day
     add = Time.zone.now.hour - Time.now.hour
     "+" + add.to_s + "h"
-    <!--https://www.ruby-forum.com/t/newbie-convert-integer-to-string-in-ruby/91550?fbclid=IwAR2wcHfsv5ZpgiSaE6POrWTKwEvV7NeaiuIdN2GDrO8wIvL0EMuBftXB-Os-->
   elsif Time.zone.now.hour < Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day < Time.now.day
     sub = Time.now.hour - Time.zone.now.hour
     sub.to_s + "h"
