@@ -19,12 +19,13 @@
 <div class="col-sm-6">
   <h1>Clock+</h1>
   <p>
-    Clock+ built by Brigitta Gloria Hegarini - email: s3766172@[default student rmit id] - Attempt grade level: PASS - Tuesday 6:30 pm Group 
+    Clock+ built by Brigitta Gloria Hegarini - email: s3766172@[default student rmit id] - Attempt grade level: CREDIT - Tuesday 6:30 pm Group 
   </p>
   <div class="jumbotron worldclock">
   <h2 class="time" style="color: Black;"><%=Time.zone = "Melbourne"  %> 
   <p class ="text-right" style="color Black"><%= Time.zone.today %></p>
   <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+  <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%I:%M %P')%></p>
   <p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
     'Business time'
     elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
@@ -59,6 +60,7 @@
 <h2 class = "time" style="color: Black;"><%=Time.zone = "Fiji" %>
 <p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
 <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%I:%M %P')%></p>
 <p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
     'Business time'
     elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
@@ -93,6 +95,7 @@
 <h2 class = "time" style="color: Black;"><%=Time.zone =  "Jerusalem" %>
 <p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
 <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%I:%M %P')%></p>
 <p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
     'Business time'
     elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
