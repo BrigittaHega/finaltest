@@ -3,16 +3,16 @@
 <div class="col-sm-3">
 <table class="table">
       <tr>
-        <td><a href="#" class="fa fa-circle" style="color:green;">  Business time</a></td>
+        <td><a href="#" class="fa fa-circle" style="color:green;"> Business time</a></td>
       </tr>
       <tr>
-        <td><a href="#" class="fa fa-circle" style="color:orange;">  Business overtime</a></td>
+        <td><a href="#" class="fa fa-circle" style="color:orange;"> Business overtime</a></td>
       </tr>
       <tr>
-        <td><a class="fa fa-circle" style="color:red;">  Personal time</a></td>
+        <td><a href="" class="fa fa-circle" style="color:red;"> Personal time</a></td>
       </tr>
       <tr>
-        <td><a href="#" class="fa fa-moon-o" style="color:blue;">  Business time</a></td>
+        <td><a href="#" class="fa fa-moon-o" style="color:blue;"> Sleeping</a></td>
       </tr>
   </table>
 </div>
@@ -24,20 +24,104 @@
   <div class="jumbotron worldclock">
   <h2 class="time" style="color: Black;"><%=Time.zone = "Melbourne"  %> 
   <p class ="text-right" style="color Black"><%= Time.zone.today %></p>
-  <p class="text-right" style="color: Black;" > <%= Time.zone %></p>
-  <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+  <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+  <p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
+    'Business time'
+    elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
+    'Business overtime'
+    elsif (Time.zone.now.hour >= 8 && Time.zone.now.hour < 9) || (Time.zone.now.hour >= 20 && Time.zone.now.hour < 23)
+    'Personal time'
+    else
+    'Sleeping'
+    end %></p>
+    <p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.day > Time.now.day
+    'Tomorrow'
+  elsif Time.zone.now.day < Time.now.day
+    'Yesterday'
+  else
+    'Today'
+  end %>
+</p>
+<p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.hour > Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day > Time.now.day
+    add = Time.zone.now.hour - Time.now.hour
+    "+" + add.to_s + "h"
+  elsif Time.zone.now.hour < Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day < Time.now.day
+    sub = Time.now.hour - Time.zone.now.hour
+    sub.to_s + "h"
+  else
+    ''
+  end %>
+</p></h2>
 <hr>
 
-<h2 class = "time" style="color: Black;"><%=Time.zone = "Tokyo" %>
+<h2 class = "time" style="color: Black;"><%=Time.zone = "Fiji" %>
 <p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
-<p class="text-right" style="color: Black;" > <%= Time.zone %></p>
-<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+<p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
+    'Business time'
+    elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
+    'Business overtime'
+    elsif (Time.zone.now.hour >= 8 && Time.zone.now.hour < 9) || (Time.zone.now.hour >= 20 && Time.zone.now.hour < 23)
+    'Personal time'
+    else
+    'Sleeping'
+    end %></p>
+    <p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.day > Time.now.day
+    'Tomorrow'
+  elsif Time.zone.now.day < Time.now.day
+    'Yesterday'
+  else
+    'Today'
+  end %>
+</p>
+<p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.hour > Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day > Time.now.day
+    add = Time.zone.now.hour - Time.now.hour
+    "+" + add.to_s + "h"
+  elsif Time.zone.now.hour < Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day < Time.now.day
+    sub = Time.now.hour - Time.zone.now.hour
+    sub.to_s + "h"
+  else
+    ''
+  end %>
+</p></h2>
 <hr>
 
-<h2 class = "time" style="color: Black;"><%=Time.zone =  "Singapore" %>
+<h2 class = "time" style="color: Black;"><%=Time.zone =  "Jerusalem" %>
 <p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
-<p class="text-right" style="color: Black;" > <%= Time.zone %></p>
-<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></h1>
+<p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+<p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
+    'Business time'
+    elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
+    'Business overtime'
+    elsif (Time.zone.now.hour >= 8 && Time.zone.now.hour < 9) || (Time.zone.now.hour >= 20 && Time.zone.now.hour < 23)
+    'Personal time'
+    else
+    'Sleeping'
+    end %></p>
+<p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.day > Time.now.day
+    'Tomorrow'
+  elsif Time.zone.now.day < Time.now.day
+    'Yesterday'
+  else
+    'Today'
+  end %>
+</p>
+<p class="text-right" style="color: Black;" >
+<%=  if Time.zone.now.hour > Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day > Time.now.day
+    add = Time.zone.now.hour - Time.now.hour
+    "+" + add.to_s + "h"
+  elsif Time.zone.now.hour < Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day < Time.now.day
+    sub = Time.now.hour - Time.zone.now.hour
+    sub.to_s + "h"
+  else
+    ''
+  end %>
+</p></h2>
 <hr>
 </div>
 </div>
