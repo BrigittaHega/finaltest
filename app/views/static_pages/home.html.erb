@@ -95,7 +95,9 @@
 <h2 class = "time" style="color: Black;"><%=Time.zone =  "Jerusalem" %>
 <p class= "text-right" style="color: Black;" > <%= Time.zone.today %> </p>
 <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%H:%M')%></p>
+<!--https://stackoverflow.com/questions/5149584/rubys-time-strftime-p-option-doesnt-work?fbclid=IwAR3T5xLsefs_ywd4dxEPI-N7L89JRDJ9U1jci8I6HM0-pXgKqhAlbcwIHhc-->
 <p class="text-right" style="color: Black;" > <%= Time.zone.now.strftime('%I:%M %P')%></p>
+<!--https://stackoverflow.com/questions/62343245/creating-time-modes-for-clock-application-m/62344720#62344720-->
 <p class="text-right" style="color: Black;" > <%= if Time.zone.now.hour >= 9 && Time.zone.now.hour < 18
     'Business time'
     elsif Time.zone.now.hour >= 18 && Time.zone.now.hour < 20
@@ -118,6 +120,7 @@
 <%=  if Time.zone.now.hour > Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day > Time.now.day
     add = Time.zone.now.hour - Time.now.hour
     "+" + add.to_s + "h"
+    <!--https://www.ruby-forum.com/t/newbie-convert-integer-to-string-in-ruby/91550?fbclid=IwAR2wcHfsv5ZpgiSaE6POrWTKwEvV7NeaiuIdN2GDrO8wIvL0EMuBftXB-Os-->
   elsif Time.zone.now.hour < Time.now.hour && Time.zone.now.day == Time.now.day || Time.zone.now.day < Time.now.day
     sub = Time.now.hour - Time.zone.now.hour
     sub.to_s + "h"
@@ -129,4 +132,5 @@
 </div>
 </div>
 <div class="col-sm-3">
+<!--https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp-->
 </div>
